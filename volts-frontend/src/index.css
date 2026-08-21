@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-obsidian text-slate-200 font-sans;
+  background-image: radial-gradient(circle at 20% 0%, rgba(123, 44, 191, 0.18), transparent 40%),
+                     radial-gradient(circle at 80% 10%, rgba(0, 245, 255, 0.08), transparent 35%);
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0B0813; }
+::-webkit-scrollbar-thumb { background: #7B2CBF; border-radius: 4px; }
+
+.card {
+  @apply bg-surface border border-white/5 rounded-2xl;
+}
+
+.btn-primary {
+  @apply px-5 py-2.5 rounded-xl bg-gradient-to-r from-deep-purple to-neon-violet
+         text-white font-semibold shadow-glow hover:brightness-110 transition
+         disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply px-5 py-2.5 rounded-xl border border-neon-violet/40 text-neon-violet
+         font-semibold hover:bg-neon-violet/10 transition;
+}
+
+.input-field {
+  @apply w-full bg-obsidian border border-white/10 rounded-lg px-4 py-2.5
+         text-slate-100 placeholder-slate-500 focus:outline-none
+         focus:border-neon-violet focus:ring-1 focus:ring-neon-violet transition;
+}
